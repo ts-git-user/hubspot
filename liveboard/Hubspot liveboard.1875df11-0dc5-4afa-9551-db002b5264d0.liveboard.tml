@@ -75,7 +75,7 @@ liveboard:
       - id: HubSpot WS
         name: HubSpot WS
         fqn: 6a4f4e1c-9d5a-4093-9381-6f08994a7f07
-      search_query: "[Amount] [Country]"
+      search_query: "[Amount] [Country] sort by [Amount] descending"
       answer_columns:
       - name: Country
       - name: Total Amount
@@ -88,7 +88,7 @@ liveboard:
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
       chart:
-        type: GEO_AREA
+        type: COLUMN
         chart_columns:
         - column_id: Country
         - column_id: Total Amount
@@ -98,7 +98,7 @@ liveboard:
           "y":
           - Total Amount
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Amount\",\"columnProperty\": {}},{\"columnId\": \"Country\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e7d9f476-128b-4ff1-88cb-c498e369fae2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Amount\"],\"isOpposite\": false}},{\"id\": \"1f5f4bfe-3d7c-44e8-b897-9843f71f6c7e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Country\"]}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total Amount\",\"colorMap\": [{\"serieName\": \"Country\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Amount\",\"columnProperty\": {}},{\"columnId\": \"Country\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1a0919ef-d52e-42b6-bafe-e311c083d421\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Amount\"],\"isOpposite\": false}},{\"id\": \"0df4df9f-abab-459d-a8e1-1d061a9ef3a4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Country\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Amount\",\"color\": \"#8C62F5\"}]}"
       display_mode: CHART_MODE
     viz_guid: 63159f8d-817a-4891-82b1-e6921df61f1b
   layout:
