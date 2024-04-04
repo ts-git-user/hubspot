@@ -1,0 +1,424 @@
+guid: 52e3463a-c03d-47b1-984d-f1f43ceddc4c
+table:
+  name: HUBSPOT_CONTACTS
+  db: SPOTAPPS_DB
+  schema: HUBSPOT
+  db_table: HUBSPOT_CONTACTS
+  connection:
+    name: niconnection
+    fqn: 9fa2cbd5-72e1-4788-bb8c-7c8aa7bc5bbe
+  columns:
+  - name: ID
+    db_column_name: ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: ARCHIVED
+    db_column_name: ARCHIVED
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: BOOL
+  - name: HS_TIME_TO_FIRST_ENGAGEMENT
+    db_column_name: HS_TIME_TO_FIRST_ENGAGEMENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: CREATEDATE
+    db_column_name: CREATEDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: HS_LAST_SALES_ACTIVITY_DATE
+    db_column_name: HS_LAST_SALES_ACTIVITY_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: HS_EMAIL_LAST_SEND_DATE
+    db_column_name: HS_EMAIL_LAST_SEND_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: HS_COUNT_IS_WORKED
+    db_column_name: HS_COUNT_IS_WORKED
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: LASTNAME
+    db_column_name: LASTNAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HS_SA_FIRST_ENGAGEMENT_DATE
+    db_column_name: HS_SA_FIRST_ENGAGEMENT_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: HS_SA_FIRST_ENGAGEMENT_OBJECT_TYPE
+    db_column_name: HS_SA_FIRST_ENGAGEMENT_OBJECT_TYPE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HS_IS_UNWORKED
+    db_column_name: HS_IS_UNWORKED
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: BOOL
+  - name: FIRSTNAME
+    db_column_name: FIRSTNAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HS_ANALYTICS_NUM_VISITS
+    db_column_name: HS_ANALYTICS_NUM_VISITS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_SOCIAL_LINKEDIN_CLICKS
+    db_column_name: HS_SOCIAL_LINKEDIN_CLICKS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_ANALYTICS_SOURCE
+    db_column_name: HS_ANALYTICS_SOURCE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: EMAIL
+    db_column_name: EMAIL
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JOBTITLE
+    db_column_name: JOBTITLE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HS_SOCIAL_GOOGLE_PLUS_CLICKS
+    db_column_name: HS_SOCIAL_GOOGLE_PLUS_CLICKS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_SOCIAL_FACEBOOK_CLICKS
+    db_column_name: HS_SOCIAL_FACEBOOK_CLICKS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_SOCIAL_TWITTER_CLICKS
+    db_column_name: HS_SOCIAL_TWITTER_CLICKS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: LIFECYCLESTAGE
+    db_column_name: LIFECYCLESTAGE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HS_EMAIL_SENDS_SINCE_LAST_ENGAGEMENT
+    db_column_name: HS_EMAIL_SENDS_SINCE_LAST_ENGAGEMENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_COUNT_IS_UNWORKED
+    db_column_name: HS_COUNT_IS_UNWORKED
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: MOBILEPHONE
+    db_column_name: MOBILEPHONE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: STATE
+    db_column_name: STATE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PHONE
+    db_column_name: PHONE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HS_EMAIL_LAST_OPEN_DATE
+    db_column_name: HS_EMAIL_LAST_OPEN_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: ZIP
+    db_column_name: ZIP
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CITY
+    db_column_name: CITY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: COUNTRY
+    db_column_name: COUNTRY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HS_EMAIL_LAST_CLICK_DATE
+    db_column_name: HS_EMAIL_LAST_CLICK_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: HS_EMAIL_FIRST_CLICK_DATE
+    db_column_name: HS_EMAIL_FIRST_CLICK_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: HS_SEQUENCES_ENROLLED_COUNT
+    db_column_name: HS_SEQUENCES_ENROLLED_COUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_SEQUENCES_IS_ENROLLED
+    db_column_name: HS_SEQUENCES_IS_ENROLLED
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: BOOL
+  - name: HS_SEQUENCES_ACTIVELY_ENROLLED_COUNT
+    db_column_name: HS_SEQUENCES_ACTIVELY_ENROLLED_COUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_LATEST_SEQUENCE_ENDED_DATE
+    db_column_name: HS_LATEST_SEQUENCE_ENDED_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: SENIORITY
+    db_column_name: SENIORITY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: FIRST_DEAL_CREATED_DATE
+    db_column_name: FIRST_DEAL_CREATED_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: NUM_ASSOCIATED_DEALS
+    db_column_name: NUM_ASSOCIATED_DEALS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_TIME_BETWEEN_CONTACT_CREATION_AND_DEAL_CREATION
+    db_column_name: HS_TIME_BETWEEN_CONTACT_CREATION_AND_DEAL_CREATION
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: DAYS_TO_CLOSE
+    db_column_name: DAYS_TO_CLOSE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_TIME_BETWEEN_CONTACT_CREATION_AND_DEAL_CLOSE
+    db_column_name: HS_TIME_BETWEEN_CONTACT_CREATION_AND_DEAL_CLOSE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: CLOSEDATE
+    db_column_name: CLOSEDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: TOTAL_REVENUE
+    db_column_name: TOTAL_REVENUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_EMAIL_LAST_REPLY_DATE
+    db_column_name: HS_EMAIL_LAST_REPLY_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: FIRST_CONVERSION_EVENT_NAME
+    db_column_name: FIRST_CONVERSION_EVENT_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: FIRST_CONVERSION_DATE
+    db_column_name: FIRST_CONVERSION_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: CURRENTLYINWORKFLOW
+    db_column_name: CURRENTLYINWORKFLOW
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HS_ANALYTICS_FIRST_URL
+    db_column_name: HS_ANALYTICS_FIRST_URL
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HS_ANALYTICS_LAST_URL
+    db_column_name: HS_ANALYTICS_LAST_URL
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HS_ANALYTICS_FIRST_REFERRER
+    db_column_name: HS_ANALYTICS_FIRST_REFERRER
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HS_ANALYTICS_LAST_REFERRER
+    db_column_name: HS_ANALYTICS_LAST_REFERRER
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CREATED_AT_DATE
+    db_column_name: CREATED_AT_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: CREATED_AT_TIME
+    db_column_name: CREATED_AT_TIME
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: TIME
+  - name: NEXT_CONTACT_DATE
+    db_column_name: NEXT_CONTACT_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: LIFECYCLESTAGE_OPPORTUNITY_DATE
+    db_column_name: LIFECYCLESTAGE_OPPORTUNITY_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: LIFECYCLESTAGE_MARKETINGQUALIFIEDLEAD_DATE
+    db_column_name: LIFECYCLESTAGE_MARKETINGQUALIFIEDLEAD_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: LIFECYCLESTAGE_CUSTOMER_DATE
+    db_column_name: LIFECYCLESTAGE_CUSTOMER_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: LIFECYCLESTAGE_SALESQUALIFIEDLEAD_DATE
+    db_column_name: LIFECYCLESTAGE_SALESQUALIFIEDLEAD_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: LIFECYCLESTAGE_EVANGELIST_DATE
+    db_column_name: LIFECYCLESTAGE_EVANGELIST_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE

@@ -1,0 +1,190 @@
+guid: 15095c54-f22a-453c-b9e1-b7da1c6acc2e
+table:
+  name: HUBSPOT_DEALS
+  db: SPOTAPPS_DB
+  schema: HUBSPOT
+  db_table: HUBSPOT_DEALS
+  connection:
+    name: niconnection
+    fqn: 9fa2cbd5-72e1-4788-bb8c-7c8aa7bc5bbe
+  columns:
+  - name: ID
+    db_column_name: ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: DEALNAME
+    db_column_name: DEALNAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HS_FORECAST_AMOUNT
+    db_column_name: HS_FORECAST_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: CREATEDATE
+    db_column_name: CREATEDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: HS_IS_CLOSED
+    db_column_name: HS_IS_CLOSED
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: BOOL
+  - name: HS_DEAL_STAGE_PROBABILITY
+    db_column_name: HS_DEAL_STAGE_PROBABILITY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: DAYS_TO_CLOSE
+    db_column_name: DAYS_TO_CLOSE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_CREATED_BY_USER_ID
+    db_column_name: HS_CREATED_BY_USER_ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_PROJECTED_AMOUNT
+    db_column_name: HS_PROJECTED_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_IS_CLOSED_WON
+    db_column_name: HS_IS_CLOSED_WON
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: BOOL
+  - name: HS_CLOSED_AMOUNT_IN_HOME_CURRENCY
+    db_column_name: HS_CLOSED_AMOUNT_IN_HOME_CURRENCY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: DESCRIPTION
+    db_column_name: DESCRIPTION
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: AMOUNT_IN_HOME_CURRENCY
+    db_column_name: AMOUNT_IN_HOME_CURRENCY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_CLOSED_AMOUNT
+    db_column_name: HS_CLOSED_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: CLOSEDATE
+    db_column_name: CLOSEDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: DEALTYPE
+    db_column_name: DEALTYPE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: AMOUNT
+    db_column_name: AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: HS_LASTMODIFIEDDATE
+    db_column_name: HS_LASTMODIFIEDDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: PIPELINE
+    db_column_name: PIPELINE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DEALSTAGE
+    db_column_name: DEALSTAGE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PIPELINE_DISPLAY_ORDER
+    db_column_name: PIPELINE_DISPLAY_ORDER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: HS_DATE_ENTERED_CLOSEDWON
+    db_column_name: HS_DATE_ENTERED_CLOSEDWON
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: CREATED_AT_DATE
+    db_column_name: CREATED_AT_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: CREATED_AT_TIME
+    db_column_name: CREATED_AT_TIME
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: TIME
+  joins_with:
+  - name: HUBSPOT_DEALS_to_HUBSPOT_DEAL_CONTACT
+    destination:
+      name: HUBSPOT_DEAL_CONTACT
+      fqn: 757daba1-baaf-4b79-8938-e6d247528106
+    "on": "[HUBSPOT_DEALS::ID] = [HUBSPOT_DEAL_CONTACT::DEAL_ID]"
+    type: INNER
+    is_one_to_one: true
