@@ -1,0 +1,416 @@
+guid: 6a4f4e1c-9d5a-4093-9381-6f08994a7f07
+worksheet:
+  name: HubSpot WS
+  tables:
+  - name: HUBSPOT_CONTACTS
+    fqn: 52e3463a-c03d-47b1-984d-f1f43ceddc4c
+  - name: HUBSPOT_DEALS
+    fqn: 15095c54-f22a-453c-b9e1-b7da1c6acc2e
+  - name: HUBSPOT_DEAL_CONTACT
+    fqn: 757daba1-baaf-4b79-8938-e6d247528106
+  joins:
+  - name: HUBSPOT_DEALS_to_HUBSPOT_DEAL_CONTACT
+    source: HUBSPOT_DEALS
+    destination: HUBSPOT_DEAL_CONTACT
+    type: INNER
+    is_one_to_one: true
+  - name: HUBSPOT_CONTACTS_to_HUBSPOT_DEAL_CONTACT
+    source: HUBSPOT_DEAL_CONTACT
+    destination: HUBSPOT_CONTACTS
+    type: INNER
+    is_one_to_one: true
+  table_paths:
+  - id: HUBSPOT_CONTACTS_1
+    table: HUBSPOT_CONTACTS
+    join_path:
+    - join:
+      - HUBSPOT_DEALS_to_HUBSPOT_DEAL_CONTACT
+      - HUBSPOT_CONTACTS_to_HUBSPOT_DEAL_CONTACT
+  - id: HUBSPOT_DEALS_1
+    table: HUBSPOT_DEALS
+    join_path:
+    - {}
+  worksheet_columns:
+  - name: Archived
+    column_id: HUBSPOT_CONTACTS_1::ARCHIVED
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Time To First Engagement
+    column_id: HUBSPOT_CONTACTS_1::HS_TIME_TO_FIRST_ENGAGEMENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Last Sales Activity Date
+    column_id: HUBSPOT_CONTACTS_1::HS_LAST_SALES_ACTIVITY_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Hs Email Last Send Date
+    column_id: HUBSPOT_CONTACTS_1::HS_EMAIL_LAST_SEND_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Hs Count Is Worked
+    column_id: HUBSPOT_CONTACTS_1::HS_COUNT_IS_WORKED
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Lastname
+    column_id: HUBSPOT_CONTACTS_1::LASTNAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Sa First Engagement Date
+    column_id: HUBSPOT_CONTACTS_1::HS_SA_FIRST_ENGAGEMENT_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Hs Sa First Engagement Object Type
+    column_id: HUBSPOT_CONTACTS_1::HS_SA_FIRST_ENGAGEMENT_OBJECT_TYPE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Is Unworked
+    column_id: HUBSPOT_CONTACTS_1::HS_IS_UNWORKED
+    properties:
+      column_type: ATTRIBUTE
+  - name: Firstname
+    column_id: HUBSPOT_CONTACTS_1::FIRSTNAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Analytics Num Visits
+    column_id: HUBSPOT_CONTACTS_1::HS_ANALYTICS_NUM_VISITS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Social Linkedin Clicks
+    column_id: HUBSPOT_CONTACTS_1::HS_SOCIAL_LINKEDIN_CLICKS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Analytics Source
+    column_id: HUBSPOT_CONTACTS_1::HS_ANALYTICS_SOURCE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Email
+    column_id: HUBSPOT_CONTACTS_1::EMAIL
+    properties:
+      column_type: ATTRIBUTE
+  - name: Jobtitle
+    column_id: HUBSPOT_CONTACTS_1::JOBTITLE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Social Google Plus Clicks
+    column_id: HUBSPOT_CONTACTS_1::HS_SOCIAL_GOOGLE_PLUS_CLICKS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Social Facebook Clicks
+    column_id: HUBSPOT_CONTACTS_1::HS_SOCIAL_FACEBOOK_CLICKS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Social Twitter Clicks
+    column_id: HUBSPOT_CONTACTS_1::HS_SOCIAL_TWITTER_CLICKS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Lifecyclestage
+    column_id: HUBSPOT_CONTACTS_1::LIFECYCLESTAGE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Email Sends Since Last Engagement
+    column_id: HUBSPOT_CONTACTS_1::HS_EMAIL_SENDS_SINCE_LAST_ENGAGEMENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Count Is Unworked
+    column_id: HUBSPOT_CONTACTS_1::HS_COUNT_IS_UNWORKED
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Mobilephone
+    column_id: HUBSPOT_CONTACTS_1::MOBILEPHONE
+    properties:
+      column_type: ATTRIBUTE
+  - name: State
+    column_id: HUBSPOT_CONTACTS_1::STATE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Phone
+    column_id: HUBSPOT_CONTACTS_1::PHONE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Email Last Open Date
+    column_id: HUBSPOT_CONTACTS_1::HS_EMAIL_LAST_OPEN_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Zip
+    column_id: HUBSPOT_CONTACTS_1::ZIP
+    properties:
+      column_type: ATTRIBUTE
+  - name: City
+    column_id: HUBSPOT_CONTACTS_1::CITY
+    properties:
+      column_type: ATTRIBUTE
+  - name: Country
+    column_id: HUBSPOT_CONTACTS_1::COUNTRY
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Email Last Click Date
+    column_id: HUBSPOT_CONTACTS_1::HS_EMAIL_LAST_CLICK_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Hs Email First Click Date
+    column_id: HUBSPOT_CONTACTS_1::HS_EMAIL_FIRST_CLICK_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Hs Sequences Enrolled Count
+    column_id: HUBSPOT_CONTACTS_1::HS_SEQUENCES_ENROLLED_COUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Sequences Is Enrolled
+    column_id: HUBSPOT_CONTACTS_1::HS_SEQUENCES_IS_ENROLLED
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Sequences Actively Enrolled Count
+    column_id: HUBSPOT_CONTACTS_1::HS_SEQUENCES_ACTIVELY_ENROLLED_COUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Latest Sequence Ended Date
+    column_id: HUBSPOT_CONTACTS_1::HS_LATEST_SEQUENCE_ENDED_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Seniority
+    column_id: HUBSPOT_CONTACTS_1::SENIORITY
+    properties:
+      column_type: ATTRIBUTE
+  - name: First Deal Created Date
+    column_id: HUBSPOT_CONTACTS_1::FIRST_DEAL_CREATED_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Num Associated Deals
+    column_id: HUBSPOT_CONTACTS_1::NUM_ASSOCIATED_DEALS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Time Between Contact Creation And Deal Creation
+    column_id: HUBSPOT_CONTACTS_1::HS_TIME_BETWEEN_CONTACT_CREATION_AND_DEAL_CREATION
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Time Between Contact Creation And Deal Close
+    column_id: HUBSPOT_CONTACTS_1::HS_TIME_BETWEEN_CONTACT_CREATION_AND_DEAL_CLOSE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Revenue
+    column_id: HUBSPOT_CONTACTS_1::TOTAL_REVENUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Email Last Reply Date
+    column_id: HUBSPOT_CONTACTS_1::HS_EMAIL_LAST_REPLY_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: First Conversion Event Name
+    column_id: HUBSPOT_CONTACTS_1::FIRST_CONVERSION_EVENT_NAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: First Conversion Date
+    column_id: HUBSPOT_CONTACTS_1::FIRST_CONVERSION_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Currentlyinworkflow
+    column_id: HUBSPOT_CONTACTS_1::CURRENTLYINWORKFLOW
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Analytics First Url
+    column_id: HUBSPOT_CONTACTS_1::HS_ANALYTICS_FIRST_URL
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Analytics Last Url
+    column_id: HUBSPOT_CONTACTS_1::HS_ANALYTICS_LAST_URL
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Analytics First Referrer
+    column_id: HUBSPOT_CONTACTS_1::HS_ANALYTICS_FIRST_REFERRER
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Analytics Last Referrer
+    column_id: HUBSPOT_CONTACTS_1::HS_ANALYTICS_LAST_REFERRER
+    properties:
+      column_type: ATTRIBUTE
+  - name: Next Contact Date
+    column_id: HUBSPOT_CONTACTS_1::NEXT_CONTACT_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Lifecyclestage Opportunity Date
+    column_id: HUBSPOT_CONTACTS_1::LIFECYCLESTAGE_OPPORTUNITY_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Lifecyclestage Marketingqualifiedlead Date
+    column_id: HUBSPOT_CONTACTS_1::LIFECYCLESTAGE_MARKETINGQUALIFIEDLEAD_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Lifecyclestage Customer Date
+    column_id: HUBSPOT_CONTACTS_1::LIFECYCLESTAGE_CUSTOMER_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Lifecyclestage Salesqualifiedlead Date
+    column_id: HUBSPOT_CONTACTS_1::LIFECYCLESTAGE_SALESQUALIFIEDLEAD_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Lifecyclestage Evangelist Date
+    column_id: HUBSPOT_CONTACTS_1::LIFECYCLESTAGE_EVANGELIST_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Dealname
+    column_id: HUBSPOT_DEALS_1::DEALNAME
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Forecast Amount
+    column_id: HUBSPOT_DEALS_1::HS_FORECAST_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Createdate
+    column_id: HUBSPOT_DEALS_1::CREATEDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Hs Is Closed
+    column_id: HUBSPOT_DEALS_1::HS_IS_CLOSED
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Deal Stage Probability
+    column_id: HUBSPOT_DEALS_1::HS_DEAL_STAGE_PROBABILITY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Days To Close
+    column_id: HUBSPOT_DEALS_1::DAYS_TO_CLOSE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Created By User Id
+    column_id: HUBSPOT_DEALS_1::HS_CREATED_BY_USER_ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Projected Amount
+    column_id: HUBSPOT_DEALS_1::HS_PROJECTED_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Is Closed Won
+    column_id: HUBSPOT_DEALS_1::HS_IS_CLOSED_WON
+    properties:
+      column_type: ATTRIBUTE
+  - name: Hs Closed Amount In Home Currency
+    column_id: HUBSPOT_DEALS_1::HS_CLOSED_AMOUNT_IN_HOME_CURRENCY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Description
+    column_id: HUBSPOT_DEALS_1::DESCRIPTION
+    properties:
+      column_type: ATTRIBUTE
+  - name: Amount In Home Currency
+    column_id: HUBSPOT_DEALS_1::AMOUNT_IN_HOME_CURRENCY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Closed Amount
+    column_id: HUBSPOT_DEALS_1::HS_CLOSED_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Closedate
+    column_id: HUBSPOT_DEALS_1::CLOSEDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Dealtype
+    column_id: HUBSPOT_DEALS_1::DEALTYPE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Amount
+    column_id: HUBSPOT_DEALS_1::AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Lastmodifieddate
+    column_id: HUBSPOT_DEALS_1::HS_LASTMODIFIEDDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Pipeline
+    column_id: HUBSPOT_DEALS_1::PIPELINE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Dealstage
+    column_id: HUBSPOT_DEALS_1::DEALSTAGE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Pipeline Display Order
+    column_id: HUBSPOT_DEALS_1::PIPELINE_DISPLAY_ORDER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Hs Date Entered Closedwon
+    column_id: HUBSPOT_DEALS_1::HS_DATE_ENTERED_CLOSEDWON
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Created At Date
+    column_id: HUBSPOT_DEALS_1::CREATED_AT_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Created At Time
+    column_id: HUBSPOT_DEALS_1::CREATED_AT_TIME
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
