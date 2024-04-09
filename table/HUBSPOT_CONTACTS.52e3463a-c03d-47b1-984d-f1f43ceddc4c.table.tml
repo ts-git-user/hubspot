@@ -422,3 +422,10 @@ table:
       index_type: DONT_INDEX
     db_column_properties:
       data_type: DATE
+  rls_rules:
+    tables:
+    - name: HUBSPOT_CONTACTS
+      fqn: 52e3463a-c03d-47b1-984d-f1f43ceddc4c
+    rules:
+    - name: RLS for Hubspot Contacts
+      expr: ts_groups = "abc"
