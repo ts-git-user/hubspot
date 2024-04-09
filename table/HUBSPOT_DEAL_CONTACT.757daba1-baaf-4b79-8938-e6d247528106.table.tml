@@ -1,0 +1,34 @@
+guid: 757daba1-baaf-4b79-8938-e6d247528106
+table:
+  name: HUBSPOT_DEAL_CONTACT
+  db: SPOTAPPS_DB
+  schema: HUBSPOT
+  db_table: HUBSPOT_DEAL_CONTACT
+  connection:
+    name: niconnection
+    fqn: 9fa2cbd5-72e1-4788-bb8c-7c8aa7bc5bbe
+  columns:
+  - name: DEAL_ID
+    db_column_name: DEAL_ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: CONTACT_ID
+    db_column_name: CONTACT_ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  joins_with:
+  - name: HUBSPOT_CONTACTS_to_HUBSPOT_DEAL_CONTACT
+    destination:
+      name: HUBSPOT_CONTACTS
+      fqn: 52e3463a-c03d-47b1-984d-f1f43ceddc4c
+    "on": "[HUBSPOT_DEAL_CONTACT::CONTACT_ID] = [HUBSPOT_CONTACTS::ID]"
+    type: INNER
+    is_one_to_one: true
