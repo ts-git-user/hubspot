@@ -1,0 +1,19 @@
+guid: 9fa2cbd5-72e1-4788-bb8c-7c8aa7bc5bbe
+connection:
+  name: niconnection
+  type: RDBMS_SNOWFLAKE
+  authentication_type: SERVICE_ACCOUNT
+  properties:
+  - key: accountName
+    value: thoughtspot-dev
+  - key: user
+    value: spotapp
+  - key: password
+    value: P2wd_4321
+  - key: role
+    value: SYSADMIN
+  - key: warehouse
+    value: DEMO_WH_SPOTAPPS
+  - key: database
+    value: SPOTAPPS_DB
+  description: ""
