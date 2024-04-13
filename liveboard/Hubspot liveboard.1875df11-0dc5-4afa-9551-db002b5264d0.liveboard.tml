@@ -101,6 +101,10 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Amount\",\"columnProperty\": {}},{\"columnId\": \"Country\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1a0919ef-d52e-42b6-bafe-e311c083d421\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Amount\"],\"isOpposite\": false}},{\"id\": \"0df4df9f-abab-459d-a8e1-1d061a9ef3a4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Country\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Amount\",\"color\": \"#8C62F5\"}]}"
       display_mode: CHART_MODE
     viz_guid: 63159f8d-817a-4891-82b1-e6921df61f1b
+  - id: Viz_4
+    viz_guid: dbdc8323-1b5d-43bc-9fc7-47a0b00de841
+    note_tile:
+      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">v2 of liveboard</span></h1><p class=\"theme-module__editor-paragraph\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
   layout:
     tabs:
     - name: Tab 1
@@ -108,14 +112,19 @@ liveboard:
       tiles:
       - visualization_id: Viz_1
         x: 0
-        "y": 0
+        "y": 1
         height: 8
         width: 6
       - visualization_id: Viz_2
         x: 6
-        "y": 0
+        "y": 1
         height: 8
         width: 6
+      - visualization_id: Viz_4
+        x: 0
+        "y": 0
+        height: 1
+        width: 12
     - name: Tab 2
       description: ""
       tiles:
