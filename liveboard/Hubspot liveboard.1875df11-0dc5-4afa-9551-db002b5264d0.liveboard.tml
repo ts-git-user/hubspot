@@ -32,7 +32,7 @@ liveboard:
           "y":
           - Total Amount
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Dealtype\",\"columnProperty\": {}},{\"columnId\": \"Total Amount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b05334dd-e5fd-41f5-8200-5f7bb07facbd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Amount\"],\"isOpposite\": false}},{\"id\": \"a14f7301-7706-4cb1-9ed9-6a1200436b38\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Dealtype\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Amount\",\"color\": \"#747E8C\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Dealtype\",\"columnProperty\": {}},{\"columnId\": \"Total Amount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b05334dd-e5fd-41f5-8200-5f7bb07facbd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Amount\"],\"isOpposite\": false}},{\"id\": \"a14f7301-7706-4cb1-9ed9-6a1200436b38\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Dealtype\"]}}],\"seriesColors\": [{\"serieName\": \"Total Amount\",\"color\": \"#FCC838\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Amount\",\"color\": \"#747E8C\"}]}"
       display_mode: CHART_MODE
     viz_guid: b7c05370-bdba-4db2-aa34-54df94bea53e
   - id: Viz_2
